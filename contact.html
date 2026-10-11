@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveNow - Car Rental</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js"></script>
+
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+    <header>
+    <nav class= "navbar">
+      <div class="logo">🚗 DRIVE<span>NOW</span></div>
+
+    <ul class="nav-links">
+        <li><a href="index.html"><i class="fa-solid fa-house"></i>HOME</a></li>
+        <li><a href="cars.html">CARS</a></li>
+        <li><a href="drivers.html">DRIVERS</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+            
+    </nav>
+  </header>
+
+
+
+<!-- Contact -->
+
+   <section class="contact" id="contact">
+
+    <div class="section-title">
+        <p><b>CONTACT</b></p>
+        <h2>Get In Touch</h2>
+    </div>
+
+    <form onsubmit="contactForm(event)">
+
+         <input type="text" id="name" placeholder="Your Name" required>
+
+        <input type="email" id="email" placeholder="Your Email" required>
+
+        <textarea id="message" placeholder="Your Message" required></textarea>
+
+        <button type="submit">Send Message</button>
+
+    </form>
+
+   </section>
+
+
+
+<!-- Booking Popup -->
+
+   <div class="modal" id="bookingModal">
+
+    <div class="modal-content">
+
+        <button class="close" onclick="closeBooking()">×</button>
+
+        <h2>Book Your Car 🚗</h2>
+
+        <p id="selectedCar"></p>
+
+        <input type="text" id="customerName" placeholder="Full Name">
+        <input type="tel" id="phone" placeholder="Phone Number">
+        <input type="number" id="days" placeholder="Number of Days" min="1">
+
+    <button class="confirm-btn" onclick="confirmBooking()">Confirm Booking</button>
+
+        <h3 id="totalPrice"></h3>
+
+    </div>
+
+   </div>
+
+
+
+   <!-- FOOTER -->
+
+    <footer>
+        <div class="logo">🚗 DRIVE<span>NOW</span></div>
+
+        <p>© 2026 DriveNow. All Rights Reserved.</p>
+    </footer>
+
+
+    
+
+
+   
+
+
+    
+
+
+    
+    
+</body>
+</html>

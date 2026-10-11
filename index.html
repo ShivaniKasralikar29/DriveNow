@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveNow - Car Rental</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js"></script>
+
+</head>
+
+<body>
+
+
+
+<!-- NAVBAR -->
+  <header>
+    <nav class= "navbar">
+      <div class="logo">🚘DRIVE<span>NOW</span></div>
+
+    <ul class="nav-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="cars.html">CARS</a></li>
+        <li><a href="drivers.html">DRIVERS</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+            
+    </nav>
+  </header>
+
+
+
+
+
+<!-- HERO SECTION -->
+
+  <section class="hero" id="home">
+
+    <div class="hero-content">
+       <p class="small-title"><b>FAST • EASY • AFFORDABLE</b></p>
+
+        <h1>Rent Your Perfect Car</h1>
+
+        <p>Choose from a wide range of comfortable and affordable cars<br>for your next journey.</p>
+
+        <button class="hero-btn" onclick="scrollToCars()">Explore Cars →</button>
+    </div>
+
+  </section>
+
+
+
+
+
+<!-- SEARCH BOX -->
+
+   <section class="search-section">
+
+    <div class="search-box">
+
+    <div class="input-group">
+        <label>📍LOCATION</label>
+        <select id="location">
+            <option value="all">All Locations</option>
+            <option value="Pune">PUNE</option>
+            <option value="Mumbai">MUMBAI</option>
+            <option value="Nanded">NANDED</option>
+        </select>
+    </div>
+
+    <div class="input-group">
+        <label>🚗CAR TYPE</label>
+        <select id="carType">
+            <option value="all">All Cars</option>
+            <option value="SUV">SUV</option>
+            <option value="Sedan">SEDAN</option>
+            <option value="Hatchback">HATCHBACK</option>
+        </select>
+    </div>
+
+    <div class="input-group">
+        <label>📅PICKUP DATE</label>
+        <input type="date" id="pickupDate">
+    </div>
+
+    <div class="input-group">
+        <label>📅RETURN DATE</label>
+        <input type="date" id="returnDate">
+    </div>
+
+    <button class="search-btn" onclick="searchCars()">Search Car</button>
+
+    </div>
+
+    </section>
+
+
+
+
+
+<!-- CARS SECTION -->
+
+   <section class="cars-section" id="cars">
+
+    <div class="section-title">
+        <p><b>OUR FLEET</b></p>
+        <h2>Select Your Ride</h2>
+        <span>Your next adventure is just a click away - Choose your perfect ride today.</span>
+    </div>
+
+    <div class="cars-container" id="carsContainer">
+
+
+  <!-- Car 1 -->
+
+    <div class="car-card" data-location="Pune" data-type="Hatchback">
+
+      <div class="car-image">
+        <span class="car-type">HATCHBACK</span>
+        <img src="IMAGES/Hyundai.jpg">
+      </div>
+
+      <div class="car-info">
+        <h3>Hyundai i20</h3>
+
+      <div class="car-details">
+        <span>👥 5 Seats</span>
+        <span>⚙ Manual</span>
+      </div>
+
+      <div class="price">
+        <div>
+          <small>Starting from</small>
+          <h3>₹1,500 <span>/day</span></h3>
+        </div>
+
+    <button onclick="openBooking('Hyundai i20', 1500)">Book Now</button>
+    </div>
+    </div>
+    </div>
+
+
+  <!-- Car 2 -->
+
+    <div class="car-card" data-location="Nanded" data-type="SUV">
+
+      <div class="car-image">
+        <span class="car-type">SUV</span>
+        <img src="IMAGES/Tata.jpg">
+      </div>
+
+      <div class="car-info">
+        <h3>Tata Harrier</h3>
+
+      <div class="car-details">
+        <span>👥 5 Seats</span>
+        <span>⚙ Automatic</span>
+      </div>
+
+      <div class="price">
+      <div>
+        <small>Starting from</small>
+        <h3>₹2,800 <span>/day</span></h3>
+      </div>
+
+    <button onclick="openBooking('Tata Harrier', 2800)">Book Now</button>
+    </div>
+    </div>
+    </div>
+
+
+  <!-- Car 3 -->
+
+    <div class="car-card" data-location="Pune" data-type="Hatchback">
+
+      <div class="car-image">
+        <span class="car-type">HATCHBACK</span>
+        <img src="IMAGES/Marutii.jpg">
+      </div>
+
+      <div class="car-info">
+        <h3>Maruti Swift</h3>
+
+      <div class="car-details">
+        <span>👥 5 Seats</span>
+        <span>⚙ Manual</span>
+      </div>
+
+      <div class="price">
+        <div>
+        <small>Starting from</small>
+        <h3>₹1,300 <span>/day</span></h3>
+      </div>
+
+    <button onclick="openBooking('Maruti Swift', 1300)">Book Now</button>
+    </div>
+    </div>
+    </div>
+
+
+  <!-- Car 4-->
+
+    <div class="car-card" data-location="Mumbai" data-type="Sedan">
+
+      <div class="car-image">
+        <span class="car-type">SEDAN</span>
+        <img src="IMAGES/Honda.jpg">
+      </div>
+
+      <div class="car-info">
+        <h3>Honda City</h3>
+
+      <div class="car-details">
+        <span>👥 5 Seats</span>
+        <span>⚙ Automatic</span>
+      </div>
+
+      <div class="price">
+       <div>
+        <small>Starting from</small>
+        <h3>₹2,000 <span>/day</span></h3>
+      </div>
+
+    <button onclick="openBooking('Honda City', 2000)">Book Now</button>
+    </div>
+    </div>
+    </div>
+
+
+  <!-- Car 5 -->
+
+    <div class="car-card" data-location="Pune" data-type="SUV">
+
+      <div class="car-image">
+        <span class="car-type">SUV</span>
+        <img src="IMAGES/Mahindra.jpg">
+      </div>
+
+      <div class="car-info">
+        <h3>Mahindra XUV700</h3>
+
+      <div class="car-details">
+        <span>👥 5 Seats</span>
+        <span>⚙ Automatic</span>
+      </div>
+
+      <div class="price">
+       <div>
+        <small>Starting from</small>
+        <h3>₹2,500 <span>/day</span></h3>
+      </div>
+
+    <button onclick="openBooking('Mahindra XUV700', 2500)">Book Now</button>
+    </div>
+    </div>
+    </div>
+
+
+  <!-- Car 6 -->
+
+    <div class="car-card" data-location="Mumbai" data-type="SUV">
+
+      <div class="car-image">
+        <span class="car-type">SUV</span>
+        <img src="IMAGES/Kia.jpg">
+      </div>
+
+      <div class="car-info">
+        <h3>Kia Seltos</h3>
+
+      <div class="car-details">
+        <span>👥 5 Seats</span>
+        <span>⚙ Automatic</span>
+      </div>
+
+      <div class="price">
+       <div>
+        <small>Starting from</small>
+        <h3>₹2,300 <span>/day</span></h3>
+      </div>
+
+    <button onclick="openBooking('Kia Seltos', 2300)">Book Now</button>
+    </div>
+    </div>
+    </div>
+
+
+  <!-- Car 7 -->
+
+    <div class="car-card" data-location="Mumbai" data-type="SUV">
+     <div class="car-image">
+        <span class="car-type">SUV</span>
+        <img src="IMAGES/Fortuner1.jpg">
+      </div>
+
+      <div class="car-info">
+        <h3>Toyota Fortuner</h3>
+
+      <div class="car-details">
+        <span>👥 7 Seats</span>
+        <span>⚙ Automatic</span>
+      </div>
+
+      <div class="price">
+       <div>
+        <small>Starting from</small>
+        <h3>₹3,500 <span>/day</span></h3>
+        </div>
+
+    <button onclick="openBooking('Toyota Fortuner', 3500)">Book Now</button>
+    </div>
+    </div>
+    </div>
+
+
+  <!-- Car 8 -->
+
+    <div class="car-card" data-location="Nanded" data-type="Sedan">
+      <div class="car-image">
+        <span class="car-type">SEDAN</span>
+        <img src="IMAGES/verna.jpg">
+      </div>
+
+      <div class="car-info">
+        <h3>Hyundai Verna</h3>
+
+      <div class="car-details">
+        <span>👥 5 Seats</span>
+        <span>⚙ Automatic</span>
+      </div>
+
+      <div class="price">
+       <div>
+        <small>Starting from</small>
+        <h3>₹2,100 <span>/day</span></h3>
+      </div>
+
+    <button onclick="openBooking('Hyundai Verna', 2100)">Book Now</button>
+    </div>
+    </div>
+    </div>
+
+    </div> 
+   </section>
+
+
+
+
+
+<!-- DRIVERS SECTION -->
+
+ <section class="drivers-section" id="drivers">
+
+  <div class="section-title">
+    <p><b>OUR DRIVERS</b></p>
+    <h2>Choose Your Driver</h2>
+    <span>Professional and experienced drivers for a comfortable journey.</span>
+  </div>
+
+
+
+  <!-- Driver 1 -->
+   
+  <div class="drivers-container">
+
+  <div class="driver-card">
+
+    <div class="driver-icon">👨‍✈️</div>
+
+      <div class="driver-info">
+        <h3>Raj Sharma</h3>
+          <p>📍 Pune</p>
+          <p>💼 5 Years Experience</p>
+          <p>⭐ 4.8 Rating</p>
+
+      <button onclick="selectDriver('Raj Sharma')">Select Driver</button>
+  </div>
+  </div>
+
+
+  <!-- Driver 2 -->
+
+  <div class="driver-card">
+
+    <div class="driver-icon">👨‍✈️</div>
+
+      <div class="driver-info">
+        <h3>Amit Patil</h3>
+        <p>📍 Mumbai</p>
+        <p>💼 7 Years Experience</p>
+        <p>⭐ 4.9 Rating</p>
+
+  <button onclick="selectDriver('Amit Patil')">Select Driver</button>
+   </div>
+   </div>
+
+
+  <!-- Driver 3 -->
+  <div class="driver-card">
+
+    <div class="driver-icon">👨‍✈️</div>
+
+      <div class="driver-info">
+        <h3>Rahul More</h3>
+          <p>📍 Nanded</p>
+          <p>💼 4 Years Experience</p>
+          <p>⭐ 4.7 Rating</p>
+
+  <button onclick="selectDriver('Rahul More')">Select Driver</button>
+  </div>
+ </div>
+</div>
+</section>
+
+
+
+
+
+<!-- WHY CHOOSE US -->
+
+   <section class="about" id="about">
+
+    <div class="section-title">
+      <p><b>WHY US</b></p>
+      <h2>Why Choose DriveNow?</h2>
+      <span>Everything you need for a comfortable and hassle-free car rental experience.</span>
+
+    </div>
+
+    <div class="features">
+
+    <div class="feature">
+      <div>💰</div>
+        <h3>Affordable Prices</h3>
+        <p>Get comfortable cars at affordable rental prices.</p>
+      </div>
+
+    <div class="feature">
+      <div>🚗</div>
+        <h3>Wide Range of Cars</h3>
+        <p>Choose from SUVs, sedans and hatchbacks.</p>
+      </div>
+
+    <div class="feature">
+      <div>🔒</div>
+        <h3>Safe & Reliable</h3>
+        <p>Well-maintained cars for a safe journey.</p>
+      </div>
+
+    <div class="feature">
+      <div>📞</div>
+        <h3>24/7 Support</h3>
+        <p>Our support team is available whenever you need help.</p>
+      </div>
+
+    </div>
+
+   </section>
+
+
+
+
+
+<!-- CONTACT -->
+
+  <section class="contact" id="contact">
+
+    <div class="section-title">
+       <p><b>CONTACT</b></p>
+       <h2>Get In Touch</h2>
+    </div>
+
+    <form onsubmit="contactForm(event)">
+
+      <input type="text" id="name" placeholder="Your Name" required>
+
+      <input type="email" id="email" placeholder="Your Email" required>
+
+      <textarea id="message" placeholder="Your Message" required></textarea>
+
+      <button type="submit">Send Message</button>
+
+    </div>
+
+    </form>
+
+   </section>
+
+
+
+
+
+<!-- BOOKING POPUP -->
+
+  <div class="modal" id="bookingModal">
+
+  <div class="modal-content">
+
+    <button class="close" onclick="closeBooking()">×</button>
+
+      <h2>Book Your Car 🚗</h2>
+      <p id="selectedCar"></p>
+
+    <input type="text"
+      id="customerName"
+      placeholder="Full Name">
+
+    <input type="tel"
+      id="phone"
+      placeholder="Phone Number">
+
+    <input type="number"
+      id="days"
+      placeholder="Number of Days"
+       min="1">
+
+  <label>Choose Service</label>
+
+    <select id="driverOption">
+        <option value="self">Self Drive</option>
+        <option value="driver">With Driver</option>
+    </select>
+
+
+    <select id="driverName" style="display:none;">
+
+    <option value="">Select Driver</option>
+
+      <option value="Raj Sharma"> Raj Sharma - Pune  </option>
+      <option value="Amit Patil"> Amit Patil - Mumbai </option>
+      <option value="Rahul More">  Rahul More - Nanded </option>
+
+    </select>
+
+  <h3 id="totalPrice"></h3>
+
+    <button class="confirm-btn" onclick="confirmBooking()"> Confirm Booking </button>
+
+  </div>
+
+</div>
+
+   
+
+
+
+<!-- FOOTER -->
+
+    <footer>
+        <div class="logo">🚗 DRIVE<span>NOW</span></div>
+
+        <p>© 2026 DriveNow. All Rights Reserved.</p>
+    </footer>
+
+
+
+</body>
+
+</html>

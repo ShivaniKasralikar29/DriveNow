@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveNow - Car Rental</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js"></script>
+
+
+
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+    <header>
+    <nav class= "navbar">
+      <div class="logo">🚗 DRIVE<span>NOW</span></div>
+
+    <ul class="nav-links">
+        <li><a href="index.html"><i class="fa-solid fa-house"></i>HOME</a></li>
+        <li><a href="cars.html">CARS</a></li>
+        <li><a href="drivers.html">DRIVERS</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+            
+    </nav>
+  </header>
+
+
+
+<!-- Cars Section -->
+
+   <section class="cars-section" id="cars">
+
+    <div class="section-title">
+        <p><b>OUR FLEET</b></p>
+        <h2>Select Your Ride</h2>
+        <span>Your next adventure is just a click away - Choose your perfect ride today.</span>
+    </div>
+
+    <div class="cars-container" id="carsContainer">
+
+
+  <!-- Car 1 -->
+
+    <div class="car-card" data-location="Pune" data-type="Hatchback">
+
+      <div class="car-image">
+        <span class="car-type">HATCHBACK</span>
+        <img src="IMAGES/Hyundai.jpg">
+      </div>
+
+      <div class="car-info">
+        <h3>Hyundai i20</h3>
+
+      <div class="car-details">
+        <span>👥 5 Seats</span>
+        <span>⚙ Manual</span>
+      </div>
+
+      <div class="price">
+        <div>
+          <small>Starting from</small>
+          <h3>₹1,500 <span>/day</span></h3>
+        </div>
+
+    <button onclick="openBooking('Hyundai i20', 1500)">Book Now</button>
+    </div>
+    </div>
+    </div>
+
+
+  <!-- Car 2 -->
+
+    <div class="car-card" data-location="Nanded" data-type="SUV">
+
+      <div class="car-image">
+        <span class="car-type">SUV</span>
+        <img src="IMAGES/Tata.jpg">
+      </div>
+
+      <div class="car-info">
+        <h3>Tata Harrier</h3>
+
+      <div class="car-details">
+        <span>👥 5 Seats</span>
+        <span>⚙ Automatic</span>
+      </div>
+
+      <div class="price">
+      <div>
+        <small>Starting from</small>
+        <h3>₹2,800 <span>/day</span></h3>
+      </div>
+
+    <button onclick="openBooking('Tata Harrier', 2800)">Book Now</button>
+    </div>
+    </div>
+    </div>
+
+
+  <!-- Car 3 -->
+
+    <div class="car-card" data-location="Pune" data-type="Hatchback">
+
+      <div class="car-image">
+        <span class="car-type">HATCHBACK</span>
+        <img src="IMAGES/Marutii.jpg">
+      </div>
+
+      <div class="car-info">
+        <h3>Maruti Swift</h3>
+
+      <div class="car-details">
+        <span>👥 5 Seats</span>
+        <span>⚙ Manual</span>
+      </div>
+
+      <div class="price">
+        <div>
+        <small>Starting from</small>
+        <h3>₹1,300 <span>/day</span></h3>
+      </div>
+
+    <button onclick="openBooking('Maruti Swift', 1300)">Book Now</button>
+    </div>
+    </div>
+    </div>
+
+
+  <!-- Car 4-->
+
+    <div class="car-card" data-location="Mumbai" data-type="Sedan">
+
+      <div class="car-image">
+        <span class="car-type">SEDAN</span>
+        <img src="IMAGES/Honda.jpg">
+      </div>
+
+      <div class="car-info">
+        <h3>Honda City</h3>
+
+      <div class="car-details">
+        <span>👥 5 Seats</span>
+        <span>⚙ Automatic</span>
+      </div>
+
+      <div class="price">
+       <div>
+        <small>Starting from</small>
+        <h3>₹2,000 <span>/day</span></h3>
+      </div>
+
+    <button onclick="openBooking('Honda City', 2000)">Book Now</button>
+    </div>
+    </div>
+    </div>
+
+
+  <!-- Car 5 -->
+
+    <div class="car-card" data-location="Pune" data-type="SUV">
+
+      <div class="car-image">
+        <span class="car-type">SUV</span>
+        <img src="IMAGES/Mahindra.jpg">
+      </div>
+
+      <div class="car-info">
+        <h3>Mahindra XUV700</h3>
+
+      <div class="car-details">
+        <span>👥 5 Seats</span>
+        <span>⚙ Automatic</span>
+      </div>
+
+      <div class="price">
+       <div>
+        <small>Starting from</small>
+        <h3>₹2,500 <span>/day</span></h3>
+      </div>
+
+    <button onclick="openBooking('Mahindra XUV700', 2500)">Book Now</button>
+    </div>
+    </div>
+    </div>
+
+
+  <!-- Car 6 -->
+
+    <div class="car-card" data-location="Mumbai" data-type="SUV">
+
+      <div class="car-image">
+        <span class="car-type">SUV</span>
+        <img src="IMAGES/Kia.jpg">
+      </div>
+
+      <div class="car-info">
+        <h3>Kia Seltos</h3>
+
+      <div class="car-details">
+        <span>👥 5 Seats</span>
+        <span>⚙ Automatic</span>
+      </div>
+
+      <div class="price">
+       <div>
+        <small>Starting from</small>
+        <h3>₹2,300 <span>/day</span></h3>
+      </div>
+
+    <button onclick="openBooking('Kia Seltos', 2300)">Book Now</button>
+    </div>
+    </div>
+    </div>
+
+
+  <!-- Car 7 -->
+
+    <div class="car-card" data-location="Mumbai" data-type="SUV">
+     <div class="car-image">
+        <span class="car-type">SUV</span>
+        <img src="IMAGES/Fortuner1.jpg">
+      </div>
+
+      <div class="car-info">
+        <h3>Toyota Fortuner</h3>
+
+      <div class="car-details">
+        <span>👥 7 Seats</span>
+        <span>⚙ Automatic</span>
+      </div>
+
+      <div class="price">
+       <div>
+        <small>Starting from</small>
+        <h3>₹3,500 <span>/day</span></h3>
+        </div>
+
+    <button onclick="openBooking('Toyota Fortuner', 3500)">Book Now</button>
+    </div>
+    </div>
+    </div>
+
+
+  <!-- Car 8 -->
+
+    <div class="car-card" data-location="Nanded" data-type="Sedan">
+      <div class="car-image">
+        <span class="car-type">SEDAN</span>
+        <img src="IMAGES/verna.jpg">
+      </div>
+
+      <div class="car-info">
+        <h3>Hyundai Verna</h3>
+
+      <div class="car-details">
+        <span>👥 5 Seats</span>
+        <span>⚙ Automatic</span>
+      </div>
+
+      <div class="price">
+       <div>
+        <small>Starting from</small>
+        <h3>₹2,100 <span>/day</span></h3>
+      </div>
+
+    <button onclick="openBooking('Hyundai Verna', 2100)">Book Now</button>
+    </div>
+    </div>
+    </div>
+
+    </div> 
+   </section>
+
+
+
+
+
+    
+
+
+    
+
+
+</body>
+
+</html>

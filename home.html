@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveNow - Car Rental</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js"></script>
+
+</head>
+
+<body>
+
+
+
+<!-- Navbar -->
+  <header>
+    <nav class= "navbar">
+      <div class="logo">🚘 DRIVE<span>NOW</span></div>
+
+    <ul class="nav-links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="cars.html">CARS</a></li>
+        <li><a href="drivers.html">DRIVERS</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+            
+    </nav>
+  </header>
+
+
+
+
+
+<!-- HERO SECTION -->
+
+  <section class="hero" id="home">
+
+    <div class="hero-content">
+       <p class="small-title"><b>FAST • EASY • AFFORDABLE</b></p>
+
+        <h1>Rent Your Perfect Car</h1>
+
+        <p>Choose from a wide range of comfortable and affordable cars<br>for your next journey.</p>
+
+        <button class="hero-btn" onclick="scrollToCars()">Explore Cars →</button>
+    </div>
+
+  </section>
+
+
+
+
+
+<!-- SEARCH BOX -->
+
+   <section class="search-section">
+
+    <div class="search-box">
+
+    <div class="input-group">
+        <label>📍LOCATION</label>
+        <select id="location">
+            <option value="all">All Locations</option>
+            <option value="Pune">PUNE</option>
+            <option value="Mumbai">MUMBAI</option>
+            <option value="Nanded">NANDED</option>
+        </select>
+    </div>
+
+    <div class="input-group">
+        <label>🚗CAR TYPE</label>
+        <select id="carType">
+            <option value="all">All Cars</option>
+            <option value="SUV">SUV</option>
+            <option value="Sedan">SEDAN</option>
+            <option value="Hatchback">HATCHBACK</option>
+        </select>
+    </div>
+
+    <div class="input-group">
+        <label>📅PICKUP DATE</label>
+        <input type="date" id="pickupDate">
+    </div>
+
+    <div class="input-group">
+        <label>📅RETURN DATE</label>
+        <input type="date" id="returnDate">
+    </div>
+
+    <button class="search-btn" onclick="searchCars()">Search Car</button>
+
+    </div>
+
+    </section>
+
+
+
+    
+
+
+
+</body>
+
+</html>
+
+
+
+

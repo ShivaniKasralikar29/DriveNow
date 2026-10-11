@@ -1,0 +1,869 @@
+/* BASIC SETTINGS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: black;
+    background: white;
+}
+
+
+
+/* NAVBAR */
+header {
+    background: brown;
+    padding: 20px 30px;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: red;
+}
+
+.logo img {
+    width: 150px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: crimson;
+}
+
+
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 560px;
+    padding: 60px 8%;
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient( rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+        url("carbackground.jpg");
+
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.small-title {
+    color: crimson;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    margin: 15px 0;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 19px;
+    margin-bottom: 25px;
+    color: white;
+}
+
+.hero-btn {
+    background: crimson;
+    color: white;
+    border: none;
+    padding: 13px 22px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background: darkred;
+    transform: translateY(-2px);
+}
+
+
+
+/* SEARCH SECTION */
+
+.search-section {
+    padding: 35px 20px;
+    background: #f5f5f5;
+}
+
+.search-box {
+    max-width: 1150px;
+    margin: auto;
+    padding: 25px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+
+    background: white;
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.input-group label {
+    font-size: 13px;
+    font-weight: bold;
+    color: gray;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 12px;
+
+    border: 1px solid gray;
+    border-radius: 6px;
+
+    outline: none;
+    background: white;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: crimson;
+     box-shadow: 5px 5px 5px brown
+}
+
+.search-btn {
+    align-self: end;
+    height: 44px;
+
+    background: crimson;
+    color: white;
+
+    border: none;
+    border-radius: 6px;
+
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.search-btn:hover {
+    background: darkred;
+}
+
+
+
+ /* CARS SECTION */
+
+.cars-section {
+    max-width: 1400px;
+    margin: auto;
+    padding: 70px 20px;
+}
+
+.cars-section .section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.cars-section .section-title p {
+    color: crimson;
+    font-size: 14px;
+}
+
+.cars-section .section-title h2 {
+    font-size: 36px;
+    margin: 8px 0;
+}
+
+.cars-section .section-title span {
+    color: gray;
+}
+
+.cars-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+/* CAR CARD */
+
+.car-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+
+    box-shadow: 5px 4px 5px gray;
+
+    transition: 0.3s;
+}
+
+.car-card:hover {
+    box-shadow: 5 5px 5px gray;
+}
+
+
+/* CAR IMAGE */
+
+.car-image {
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.car-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition: 0.4s;
+}
+
+.car-card:hover .car-image img {
+    transform: scale(1.05);
+}
+
+/* CAR TYPE */
+
+.car-type {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+
+    background: crimson;
+    color: white;
+
+    padding: 5px 10px;
+    border-radius: 5px;
+
+    font-size: 10px;
+    font-weight: bold;
+}
+
+
+/* CAR INFORMATION */
+
+.car-info {
+    padding: 20px;
+}
+
+.car-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.car-details {
+    display: flex;
+    justify-content: space-between;
+
+    color: gray;
+
+    margin: 15px 0;
+    font-size: 13px;
+}
+
+/* PRICE */
+
+.price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 15px;
+}
+
+.price small {
+    color: gray;
+}
+
+.price h3 {
+    margin-top: 4px;
+}
+
+.price h3 span {
+    font-size: 12px;
+    color: grey;
+}
+
+.price button {
+    background: crimson;
+    color: white;
+
+    border: none;
+    padding: 9px 12px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.price button:hover {
+    background: darkred;
+}
+
+
+
+/* DRIVERS SECTION */
+
+.drivers-section {
+    padding: 70px 20px;
+    background: whitesmoke;
+}
+
+.drivers-section 
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.drivers-section 
+.section-title p {
+    color: crimson;
+}
+
+.drivers-section 
+.section-title h2 {
+    font-size: 36px;
+    margin: 8px 0;
+}
+
+.drivers-section 
+.section-title span {
+    color: grey;
+}
+
+.drivers-container {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* DRIVER CARD */
+
+.driver-card {
+    background: white;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px gray;;
+    transition: 0.3s;
+}
+
+.driver-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px gray;
+}
+
+.driver-icon {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.driver-info h3 {
+    margin-bottom: 12px;
+}
+
+.driver-info p {
+    color: gray;
+    margin: 7px;
+    font-size: 14px;
+}
+
+.driver-info button {
+    margin-top: 15px;
+    background: crimson;
+    color: white;
+    border: none;
+    padding: 11px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.driver-info button:hover {
+    background: darkred;
+}
+
+
+
+/* ABOUT WHY US */
+
+.about {
+    padding: 70px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.about .section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.about .section-title p {
+    color: crimson;
+}
+
+.about .section-title h2 {
+    font-size: 36px;
+    margin: 8px 0;
+}
+
+.about .section-title span {
+    color: gray;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+/* FEATURE CARD */
+
+.feature {
+    padding: 30px 20px;
+    text-align: center;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 5px 4px 10px black;
+    transition: 0.3s;
+}
+
+.feature:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 5px gray;
+}
+
+.feature div {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.feature h3 {
+    margin-bottom: 10px;
+}
+
+.feature p {
+    color: gray;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+
+/* CONTACT SECTION */
+
+.contact {
+    padding: 70px 20px;
+    background: whitesmoke;
+}
+
+.contact .section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact .section-title p {
+    color: crimson;
+}
+
+.contact .section-title h2 {
+    font-size: 36px;
+    margin: 8px 0;
+}
+
+.contact .section-title span {
+    color: gray;
+}
+
+.contact form {
+    max-width: 650px;
+    margin: auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 5px 5px 10px grey;
+}
+
+/* CONTACT INPUTS */
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid gray;
+    border-radius: 7px;
+    outline: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    border-color: crimson;
+    box-shadow: 0 0 5px rgba(220,20,60,0.2);
+}
+
+.contact textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* CONTACT BUTTON */
+
+.contact button {
+    width: 100%;
+    padding: 14px;
+    background: crimson;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact button:hover {
+    background: darkred;
+    transform: translateY(-2px);
+}
+
+
+
+ /* BOOKING POPUP */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    padding: 20px;
+}
+
+.modal-content {
+    width: 90%;
+    max-width: 450px;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 5px 5px 5px gray;
+}
+
+/* POPUP HEADING */
+
+.modal-content h2 {
+    margin-bottom: 10px;
+}
+
+.modal-content p {
+    color: crimson;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* POPUP INPUTS */
+
+.modal-content input,
+.modal-content select {
+    width: 100%;
+    padding: 12px;
+    margin: 6px 0;
+    border: 1px solid gray;
+    border-radius: 6px;
+    outline: none;
+}
+
+.modal-content input:focus,
+.modal-content select:focus {
+    border-color: crimson;
+}
+
+.modal-content label {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* CLOSE BUTTON */
+
+.close {
+    float: right;
+    background: transparent;
+    color: black;
+    border: none;
+    font-size: 30px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: crimson;
+    background: transparent;
+    transform: none;
+}
+
+/* TOTAL PRICE */
+
+#totalPrice {
+    text-align: center;
+    margin: 15px;
+    color: crimson;
+}
+
+/* CONFIRM BUTTON */
+
+.confirm-btn {
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+}
+
+.confirm-btn:hover {
+    background: red;
+}
+
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+    background: brown;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+footer .logo {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+footer .logo span {
+    color: crimson;
+}
+
+footer p {
+    margin-top: 10px;
+
+    color: gray;
+
+    font-size: 13px;
+}
+
+
+
+/* TABLET RESPONSIVE */
+
+@media (max-width: 1000px) {
+
+    /* Search */
+    .search-box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Cars */
+    .cars-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Drivers */
+    .rivers-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Features */
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Hero */
+    .hero h1 {
+        font-size: 42px;
+    }
+}
+
+
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 650px) {
+
+    /* Navbar */
+    header {
+        padding: 15px;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+
+    /* Hero */
+    .hero {
+        min-height: 500px;
+        padding: 40px 20px;
+
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .small-title {
+        font-size: 12px;
+    }
+
+
+    /* Search */
+    .search-section {
+        padding: 20px 15px;
+    }
+
+    .search-box {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+
+    /* Cars */
+    .cars-section {
+        padding: 50px 15px;
+    }
+
+    .cars-container {
+        grid-template-columns: 1fr;
+    }
+
+    .car-image {
+        height: 220px;
+    }
+
+    .cars-section .section-title h2 {
+        font-size: 28px;
+    }
+
+
+    /* Drivers */
+    .drivers-section {
+        padding: 50px 15px;
+    }
+
+    .drivers-container {
+        grid-template-columns: 1fr;
+    }
+
+    .drivers-section .section-title h2 {
+        font-size: 28px;
+    }
+
+
+    /* About */
+    .about {
+        padding: 50px 15px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .about .section-title h2 {
+        font-size: 28px;
+    }
+
+
+    /* Contact */
+    .contact {
+        padding: 50px 15px;
+    }
+
+    .contact form {
+        padding: 20px;
+    }
+
+    .contact .section-title h2 {
+        font-size: 28px;
+    }
+
+
+    /* Booking Popup */
+    .modal-content {
+        width: 95%;
+        padding: 22px;
+    }
+
+
+    /* Footer */
+    footer {
+        padding: 30px 15px;
+    }
+}
